@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -10,7 +11,9 @@ const Navbar = () => {
         <div className="relative flex items-right justify-between">
           <div className="w-60 max-w-full">
             <a href="/#" className="block w-full py-5">
-                <h1 className="text-2xl font-bold text-white font-mono">adjay27</h1>
+              <h1 className="text-2xl font-bold text-white font-mono">
+                adjay27
+              </h1>
               {/*  Replace this image with your own
               
               <img
@@ -48,9 +51,15 @@ const Navbar = () => {
                 } `}
               >
                 <ul className="block lg:flex">
-                  <ListItem NavLink="/#">Home</ListItem>
-                  <ListItem NavLink="/#">About</ListItem>
-                  <ListItem NavLink="/#">Projects</ListItem>
+                  <ListItem>
+                    <Link to="/">Home</Link>
+                  </ListItem>
+                  <ListItem>
+                    <Link to="/about">About</Link>
+                  </ListItem>
+                  <ListItem>
+                    <Link to="/projects">Projects</Link>
+                  </ListItem>
                 </ul>
               </nav>
             </div>
