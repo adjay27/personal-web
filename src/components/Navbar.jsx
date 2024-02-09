@@ -1,42 +1,33 @@
 /* eslint-disable react/prop-types */
+/// <reference types="tailwindcss" />
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import Switcher12 from "./Switcher";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="flex w-full border-white h-[10vh] items-right  bg-white dark:bg-dark">
-      <div className="container">
-        <div className="relative flex items-right justify-between">
-          <div className="w-60 max-w-full">
-            <a href="/#" className="block w-full py-5">
-              <h1 className="text-2xl font-bold text-white font-mono">
+    <header className=" w-full h-[10vh] bg-white dark:bg-dark">
+      <div className="container mx-auto">
+        <div className="relative flex items-right justify-between align-middle ">
+          <div className="flex-col align-middle py-6">
+            <a href="/" className="flex w-fit">
+              
+              <h1 className="text-gray-500 dark:text-violet-500 text-2xl font-bold font-mono">
                 adjay27
               </h1>
-              {/*  Replace this image with your own
-              
-              <img
-                src="https://cdn.tailgrids.com/2.0/image/assets/images/logo/logo-primary.svg"
-                alt="logo"
-                className="dark:hidden"
-              />
-              <img
-                src="https://cdn.tailgrids.com/2.0/image/assets/images/logo/logo-white.svg"
-                alt="logo"
-                className="hidden dark:block"
-              /> */}
             </a>
           </div>
 
-          <div className="flex w-full items-center justify-center px-4">
+          <div className="flex w-full top-0 flex-row-reverse ">
             <div>
               <button
                 onClick={() => setOpen(!open)}
                 id="navbarToggler"
                 className={` ${
                   open && "navbarTogglerActive"
-                } absolute right-4 top-1/2 block -translate-y-1/2 rounded-lg px-3 py-[6px] ring-primary focus:ring-2 lg:hidden`}
+                } absolute right-4 block -translate-y-1/2 rounded-lg px-3 py-[6px] ring-primary focus:ring-2 lg:hidden`}
               >
                 <span className="relative my-[6px] block h-[2px] w-[30px] bg-body-color dark:bg-white"></span>
                 <span className="relative my-[6px] block h-[2px] w-[30px] bg-body-color dark:bg-white"></span>
@@ -63,23 +54,7 @@ const Navbar = () => {
                 </ul>
               </nav>
             </div>
-            {/*   button at the end 
-            
-            <div className="hidden justify-end pr-16 sm:flex lg:pr-0">
-              <a
-                href="/#"
-                className="px-7 py-3 text-base font-medium text-dark hover:text-primary dark:text-white"
-              >
-                Sign in
-              </a>
-
-              <a
-                href="/#"
-                className="rounded-md bg-primary px-7 py-3 text-base font-medium text-white hover:bg-primary/90"
-              >
-                Sign Up
-              </a>
-            </div> */}
+            <Switcher12  />
           </div>
         </div>
       </div>
