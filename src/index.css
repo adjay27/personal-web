@@ -10,5 +10,12 @@
 
 p {
     @apply font-mono
+    dark:text-white/90 text-black/90
 }
+
+h1 {
+    @apply font-bold
+    dark:text-[#FACC15]/90 text-black/90
+}
+
 
