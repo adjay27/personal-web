@@ -1,80 +1,68 @@
-/* eslint-disable react/prop-types */
-/// <reference types="tailwindcss" />
-import { useState } from "react";
-import { Link } from "react-router-dom";
-import Switcher12 from "./Switcher";
+import { useState } from "react"
+import ThemeSwitcher from "./Switcher.jsx"
 
 const Navbar = () => {
-  const [open, setOpen] = useState(false);
+
+  const [open, setOpen] = useState(false)
+
 
   return (
-    <header className=" w-full h-[10vh] bg-white dark:bg-dark">
-      <div className="container mx-auto">
-        <div className="relative flex items-right justify-between align-middle ">
-          <div className="flex-col align-middle py-6">
-            <a href="/" className="flex w-fit">
-              
-              <h1 className="text-gray-500 dark:text-violet-500 text-2xl font-bold font-mono">
-                adjay27
-              </h1>
-            </a>
-          </div>
+    <header className='top-0 w-full mx-auto flex items-center p-8 px-8 justify-between bg-light dark:bg-dark'>
+      <div className='w-1/3'>
+        <a href='/' className='flex items-center'>
+          <h1 className='text-gray-500 dark:text-violet-500 text-2xl font-bold font-mono'>adjay27</h1>
+        </a>
+      </div>
 
-          <div className="flex w-full top-0 flex-row-reverse ">
-            <div>
-              <button
-                onClick={() => setOpen(!open)}
-                id="navbarToggler"
-                className={` ${
-                  open && "navbarTogglerActive"
-                } absolute right-4 block -translate-y-1/2 rounded-lg px-3 py-[6px] ring-primary focus:ring-2 lg:hidden`}
-              >
-                <span className="relative my-[6px] block h-[2px] w-[30px] bg-body-color dark:bg-white"></span>
-                <span className="relative my-[6px] block h-[2px] w-[30px] bg-body-color dark:bg-white"></span>
-                <span className="relative my-[6px] block h-[2px] w-[30px] bg-body-color dark:bg-white"></span>
-              </button>
+      <div className="w-1/3 mx-auto flex  justify-center max-md:hidden">
+        <ThemeSwitcher />
+      </div>
 
-              <nav
-                // :className="!navbarOpen && 'hidden' "
-                id="navbarCollapse"
-                className={`absolute right-4 top-full w-full max-w-[250px] rounded-lg bg-white px-6 py-5 shadow dark:bg-dark-2 lg:static lg:block lg:w-full lg:max-w-full lg:shadow-none lg:dark:bg-transparent ${
-                  !open && "hidden"
-                } `}
-              >
-                <ul className="block lg:flex">
-                  <ListItem>
-                    <Link to="/">Home</Link>
-                  </ListItem>
-                  <ListItem>
-                    <Link to="/about">About</Link>
-                  </ListItem>
-                  <ListItem>
-                    <Link to="/projects">Projects</Link>
-                  </ListItem>
-                </ul>
-              </nav>
-            </div>
-            <Switcher12  />
-          </div>
+      <div className="w-1/3 z-99 flex justify-end">
+        <div>
+          <button onClick={() => setOpen(!open)}
+            className={` ${open && "navbarTogglerActive"} block rounded-lg right-4
+                    ring-primary focus:ring-2 lg:hidden`}
+          >
+            <span className="relative my-[6px] block h-[2px] w-[30px] bg-body-color dark:bg-white"></span>
+            <span className="relative my-[6px] block h-[2px] w-[30px] bg-body-color dark:bg-white"></span>
+            <span className="relative my-[6px] block h-[2px] w-[30px] bg-body-color dark:bg-white"></span>
+          </button>
+        </div>
+        <div>
+          <nav id="navbarCollapse" className={` rounded-lg  bg-slate-300 lg:bg-white lg:dark:bg-transparent 
+                    flex flex-row
+                    dark:bg-dark-2 
+                                       
+                    lg:static lg:block lg:w-full  ${!open && "hidden"} `}>
+            <ul className='absolute lg:relative lg:border-none flex z-10 max-lg:top-16 flex-col max-lg:right-8 max-lg:p-4 max-lg:m-2 dark:bg-dark bg-white border
+                     gap-4 lg:flex-row rounded-lg text-black' >
+              <ListItem Navlink='/'>Home</ListItem>
+              <ListItem Navlink='/about'>About</ListItem>
+              <ListItem Navlink='/projects'>Projects</ListItem>
+            </ul>
+          </nav>
         </div>
       </div>
+
     </header>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar
 
-const ListItem = ({ children, NavLink }) => {
+const ListItem = ({ children, Navlink }) => {
   return (
     <>
       <li>
-        <a
-          href={NavLink}
-          className="flex py-2 text-base font-medium text-body-color hover:text-dark dark:text-dark-6 dark:hover:text-white lg:ml-12 lg:inline-flex"
-        >
+        <a href={Navlink}
+          className="flex text-base font-medium text-body-color hover:text-dark dark:text-dark-6 dark:hover:text-white
+                    lg:flex-col lg:ml-12
+                    md:flex-row
+                    ">
           {children}
         </a>
       </li>
     </>
-  );
-};
+  )
+}

@@ -36,19 +36,17 @@ const Switcher12 = () => {
           className="sr-only"
           aria-label="Toggle dark mode"
         />
-        <MdLightMode className="w-8 h-8 fill-yellow-400 dark:fill-white" />
+        <MdLightMode className="w-5 h-5 fill-yellow-400 dark:fill-white" />
         <span
-          className={`slider mx-4 flex h-8 w-[60px] items-center rounded-full p-1 duration-200 ${
-            isChecked ? "bg-[#212b36]" : "bg-[#CCCCCE]"
-          }`}
+          className={`slider mx-2 flex h-7 w-[56px] items-center rounded-full p-1 duration-200 ${isChecked ? "bg-[#212b36]" : "bg-[#CCCCCE]"
+            }`}
         >
           <span
-            className={`dot h-6 w-6 rounded-full bg-white duration-200 ${
-              isChecked ? "translate-x-[28px]" : ""
-            }`}
+            className={`dot h-5 w-5 p-1 rounded-full bg-white duration-200 ${isChecked ? "translate-x-[24px]" : ""
+              }`}
           ></span>
         </span>
-        <MdOutlineDarkMode className="w-8 h-8 fill-slate-400 dark:fill-yellow-400" />
+        <MdOutlineDarkMode className="w-5 h-5 fill-slate-400 dark:fill-yellow-400" />
       </label>
     </>
   );
