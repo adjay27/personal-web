@@ -38,8 +38,8 @@ const Navbar = () => {
             <ul className='absolute lg:relative lg:border-none flex z-10 max-lg:top-16 flex-col max-lg:right-8 max-lg:p-4 max-lg:m-2 dark:bg-dark bg-white border
                      gap-4 lg:flex-row rounded-lg text-black' >
               <ListItem Navlink='/'>Home</ListItem>
-              <ListItem Navlink='/about'>About</ListItem>
-              <ListItem Navlink='/projects'>Projects</ListItem>
+              <ListItem Navlink='about'>About</ListItem>
+              <ListItem Navlink='projects'>Projects</ListItem>
             </ul>
           </nav>
         </div>

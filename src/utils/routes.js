@@ -11,14 +11,13 @@ const routes = createBrowserRouter([
     children: [
       {
         path: "/",
-
         children: [
           {
             path: "/",
             Component: Index,
           },
           {
-            path: "/about",
+            path: "about",
             Component: About,
           },
         ],
