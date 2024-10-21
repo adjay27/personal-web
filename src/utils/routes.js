@@ -6,23 +6,16 @@ import App from "../App";
 
 const routes = createBrowserRouter([
   {
-    path: "/",
     Component: App,
     children: [
       {
         path: "/",
-        children: [
-          {
-            path: "/",
-            Component: Index,
-          },
-          {
-            path: "about",
-            Component: About,
-          },
-        ],
+        Component: Index,
       },
-
+      {
+        path: "/about",
+        Component: About,
+      },
       {
         path: "/projects",
         Component: Projects,

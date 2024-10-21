@@ -1,5 +1,7 @@
+/* eslint-disable react/prop-types */
 import { useState } from "react"
 import ThemeSwitcher from "./Switcher.jsx"
+import { Link } from "react-router-dom"
 
 const Navbar = () => {
 
@@ -37,9 +39,15 @@ const Navbar = () => {
                     lg:static lg:block lg:w-full  ${!open && "hidden"} `}>
             <ul className='absolute lg:relative lg:border-none flex z-10 max-lg:top-16 flex-col max-lg:right-8 max-lg:p-4 max-lg:m-2 dark:bg-dark bg-white border
                      gap-4 lg:flex-row rounded-lg text-black' >
-              <ListItem Navlink='/'>Home</ListItem>
-              <ListItem Navlink='about'>About</ListItem>
-              <ListItem Navlink='projects'>Projects</ListItem>
+              <ListItem>
+                <Link to="/">Home</Link>
+              </ListItem>
+              <ListItem>
+                <Link to="/about">About</Link>
+              </ListItem>
+              <ListItem>
+                <Link to="/projects">Projects</Link>
+              </ListItem>
             </ul>
           </nav>
         </div>
