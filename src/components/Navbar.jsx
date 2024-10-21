@@ -11,9 +11,11 @@ const Navbar = () => {
   return (
     <header className='top-0 w-full mx-auto flex items-center p-8 px-8 justify-between bg-light dark:bg-dark'>
       <div className='w-1/3'>
-        <a href='/' className='flex items-center'>
+
+        <Link to="/">
           <h1 className='text-gray-500 dark:text-violet-500 text-2xl font-bold font-mono'>adjay27</h1>
-        </a>
+        </Link>
+
       </div>
 
       <div className="w-1/3 mx-auto flex  justify-center max-md:hidden">
@@ -59,17 +61,17 @@ const Navbar = () => {
 
 export default Navbar
 
-const ListItem = ({ children, Navlink }) => {
+const ListItem = ({ children }) => {
   return (
     <>
       <li>
-        <a href={Navlink}
+        <div
           className="flex text-base font-medium text-body-color hover:text-dark dark:text-dark-6 dark:hover:text-white
                     lg:flex-col lg:ml-12
                     md:flex-row
                     ">
           {children}
-        </a>
+        </div>
       </li>
     </>
   )
