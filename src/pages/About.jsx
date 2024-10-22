@@ -1,9 +1,42 @@
 const About = () => {
   return (
     <>
-      <div className="w-full h-[80vh] flex items-center justify-center bg-white dark:bg-dark">
-        <div className="container w-[800px] px-8">
-          <p className="title text-[65px] font-medium text-gray-500 dark:text-white">
+      <div className=" flex-row max-md:flex-col gap-8 flex mx-auto p-4 items-center justify-center bg-white dark:bg-dark">
+        <div className="hidden dark:block w-[360px] h-[340px] overflow-hidden dark:text-white ">
+          ⣇⣿⠘⣿⣿⣿⡿⡿⣟⣟⢟⢟⢝⠵⡝⣿⡿⢂⣼⣿⣷⣌⠩⡫⡻⣝⠹⢿⣿⣷
+          ⡆⣿⣆⠱⣝⡵⣝⢅⠙⣿⢕⢕⢕⢕⢝⣥⢒⠅⣿⣿⣿⡿⣳⣌⠪⡪⣡⢑⢝⣇
+          ⡆⣿⣿⣦⠹⣳⣳⣕⢅⠈⢗⢕⢕⢕⢕⢕⢈⢆⠟⠋⠉⠁⠉⠉⠁⠈⠼⢐⢕⢽
+          ⡗⢰⣶⣶⣦⣝⢝⢕⢕⠅⡆⢕⢕⢕⢕⢕⣴⠏⣠⡶⠛⡉⡉⡛⢶⣦⡀⠐⣕⢕
+          ⡝⡄⢻⢟⣿⣿⣷⣕⣕⣅⣿⣔⣕⣵⣵⣿⣿⢠⣿⢠⣮⡈⣌⠨⠅⠹⣷⡀⢱⢕
+          ⡝⡵⠟⠈⢀⣀⣀⡀⠉⢿⣿⣿⣿⣿⣿⣿⣿⣼⣿⢈⡋⠴⢿⡟⣡⡇⣿⡇⡀⢕
+          ⡝⠁⣠⣾⠟⡉⡉⡉⠻⣦⣻⣿⣿⣿⣿⣿⣿⣿⣿⣧⠸⣿⣦⣥⣿⡇⡿⣰⢗⢄
+          ⠁⢰⣿⡏⣴⣌⠈⣌⠡⠈⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣬⣉⣉⣁⣄⢖⢕⢕⢕
+          ⡀⢻⣿⡇⢙⠁⠴⢿⡟⣡⡆⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣵⣵⣿
+          ⡻⣄⣻⣿⣌⠘⢿⣷⣥⣿⠇⣿⣿⣿⣿⣿⣿⠛⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+          ⣷⢄⠻⣿⣟⠿⠦⠍⠉⣡⣾⣿⣿⣿⣿⣿⣿⢸⣿⣦⠙⣿⣿⣿⣿⣿⣿⣿⣿⠟
+          ⡕⡑⣑⣈⣻⢗⢟⢞⢝⣻⣿⣿⣿⣿⣿⣿⣿⠸⣿⠿⠃⣿⣿⣿⣿⣿⣿⡿⠁⣠
+          ⡝⡵⡈⢟⢕⢕⢕⢕⣵⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣶⣿⣿⣿⣿⣿⠿⠋⣀⣈⠙
+          ⡝⡵⡕⡀⠑⠳⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠛⢉⡠⡲⡫⡪⡪⡣
+        </div>
+        <div className="dark:hidden  w-[360px] h-[340px] overflow-hidden dark:text-white">
+          ⠸⠀⣧⠀⠀⠀⢀⢀⠠⠠⡠⡠⡢⣊⢢⠀⢀⡽⠃⠀⠈⠳⣖⢔⢄⠢⣆⡀⠀⠈
+          ⢹⠀⠹⣎⠢⢊⠢⡺⣦⠀⡪⡪⡪⡪⡢⠚⡭⣺⠀⠀⠀⢀⠌⠳⣕⢕⠞⡮⡢⠸
+          ⢹⠀⠀⠙⣆⠌⠌⠪⡺⣷⡨⡪⡪⡪⡪⡪⡷⡹⣠⣴⣶⣾⣶⣶⣾⣷⣃⡯⡪⡂
+          ⢨⡏⠉⠉⠙⠢⡢⡪⡪⣺⢹⡪⡪⡪⡪⡪⠋⣰⠟⢉⣤⢶⢶⢤⡉⠙⢿⣯⠪⡪
+          ⢢⢻⡄⡠⠀⠀⠈⠪⠪⠺⠀⠫⠪⠊⠊⠀⠀⡟⠀⡟⠑⢷⠳⣗⣺⣆⠈⢿⡎⡪
+          ⢢⢊⣠⣷⡿⠿⠿⢿⣶⡀⠀⠀⠀⠀⠀⠀⠀⠃⠀⡷⢴⣋⡀⢠⠞⢸⠀⢸⢿⡪
+          ⢢⣾⠟⠁⣠⢶⢶⢶⣄⠙⠄⠀⠀⠀⠀⠀⠀⠀⠀⠘⣇⠀⠙⠚⠀⢸⢀⠏⡨⡻
+          ⣾⡏⠀⢰⠋⠳⣷⠳⣞⣷⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠓⠶⠶⠾⠻⡩⡪⡪⡪
+          ⢿⡄⠀⢸⡦⣾⣋⡀⢠⠞⢹⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠊⠊⠀
+          ⢄⠻⠄⠀⠳⣧⡀⠈⠚⠀⣸⠀⠀⠀⠀⠀⠀⣤⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+          ⠈⡻⣄⠀⠠⣀⣙⣲⣶⠞⠁⠀⠀⠀⠀⠀⠀⡇⠀⠙⣦⠀⠀⠀⠀⠀⠀⠀⠀⣠
+          ⢪⢮⠮⠷⠄⡨⡠⡡⡢⠄⠀⠀⠀⠀⠀⠀⠀⣇⠀⣀⣼⠀⠀⠀⠀⠀⠀⢀⣾⠟
+          ⢢⢊⢷⡠⡪⡪⡪⡪⠊⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠉⠀⠀⠀⠀⠀⣀⣴⠿⠷⣦
+          ⢢⢊⢪⢿⣮⣌⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣤⡶⢟⢍⢔⢕⢕⢜
+        </div>
+
+        <div className="p-8">
+          <p className="title text-[32px] font-bold text-gray-500 dark:text-white">
             About
           </p>
           <h1>Knowledge:</h1>
@@ -21,7 +54,6 @@ const About = () => {
           <h1>Test:</h1>
           <p>Cypress, Jest</p>
         </div>
-        <div></div>
       </div>
     </>
   );

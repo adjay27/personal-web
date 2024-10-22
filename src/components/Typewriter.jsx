@@ -5,7 +5,7 @@ const Typewriter = () => {
     <div>
 
       <ReactTyped
-        strings={["Hello", "Hola", "Bonjour", "Hallo", "Ciao", "こんにちは", "سلام", "Здравствуйте", "你好"]}
+        strings={["Hello", "Hola", "Bonjour", "Halo", "Ciao", "こんにちは", "你好"]}
         typeSpeed={300}
         Delay={3000}
         backSpeed={100}

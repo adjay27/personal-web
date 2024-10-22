@@ -9,7 +9,7 @@ const Navbar = () => {
 
 
   return (
-    <header className='top-0 w-full mx-auto flex items-center p-8 px-8 justify-between bg-light dark:bg-dark'>
+    <header className='top-0 w-full mx-auto flex items-center p-8 px-8 h-[10vh] justify-between bg-light dark:bg-dark'>
       <div className='w-1/3'>
 
         <Link to="/">
@@ -39,7 +39,7 @@ const Navbar = () => {
                     dark:bg-dark-2 
                                        
                     lg:static lg:block lg:w-full  ${!open && "hidden"} `}>
-            <ul className='absolute lg:relative lg:border-none flex z-10 max-lg:top-16 flex-col max-lg:right-8 max-lg:p-4 max-lg:m-2 dark:bg-dark bg-white border
+            <ul className='absolute lg:relative lg:border-none flex z-10 max-lg:top-16 flex-col max-lg:right-8 max-lg:p-4 max-lg:m-2 dark:bg-dark bg-light border
                      gap-4 lg:flex-row rounded-lg text-black' >
               <ListItem>
                 <Link to="/">Home</Link>

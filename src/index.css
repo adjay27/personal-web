@@ -10,9 +10,12 @@
   }
 }
 
+body {
+  @apply bg-light dark:bg-dark flex flex-col;
+}
+
 p {
-  @apply font-mono
-    dark:text-white/90 text-black/90;
+  @apply font-mono text-sm dark:text-white/90 text-black/90;
 }
 
 h1 {

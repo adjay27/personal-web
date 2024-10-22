@@ -5,16 +5,15 @@ import Navbar from "./components/Navbar.jsx";
 function App() {
   return (
     <>
+      <div className="flex min-h-screen flex-col">
+        <Navbar />
+        <main className="flex-grow flex items-center justify-center">
+          <Outlet />
+        </main>
 
-
-      <Navbar />
-      <Outlet />
-      <Footer />
-
+        <Footer />
+      </div>
     </>
-
-
-
   )
 }
 

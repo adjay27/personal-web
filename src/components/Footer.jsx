@@ -2,7 +2,7 @@ import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 
 const Footer = () => {
   return (
-    <footer className="bottom-0 sticky p-8 w-full  bg-white dark:bg-dark">
+    <footer className=" mt-auto bottom-0 p-8 w-full h-[10vh] bg-light dark:bg-dark flex items-center justify-center">
       <div className="flex justify-center mx-auto gap-8">
         <a href="https://github.com/adjay27" target="_blank" rel="noreferrer">
           <div className="flex flex-row items-center gap-2">
