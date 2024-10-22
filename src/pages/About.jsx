@@ -1,7 +1,7 @@
 const About = () => {
   return (
     <>
-      <div className=" flex-row max-md:flex-col gap-8 flex mx-auto p-4 items-center justify-center bg-white dark:bg-dark">
+      <div className=" flex-row max-md:flex-col gap-8 flex mx-auto p-4 items-center justify-center bg-light dark:bg-dark">
         <div className="hidden dark:block w-[360px] h-[340px] overflow-hidden dark:text-white ">
           ⣇⣿⠘⣿⣿⣿⡿⡿⣟⣟⢟⢟⢝⠵⡝⣿⡿⢂⣼⣿⣷⣌⠩⡫⡻⣝⠹⢿⣿⣷
           ⡆⣿⣆⠱⣝⡵⣝⢅⠙⣿⢕⢕⢕⢕⢝⣥⢒⠅⣿⣿⣿⡿⣳⣌⠪⡪⣡⢑⢝⣇

@@ -4,7 +4,7 @@ import Typewriter from "../components/Typewriter";
 
 const Index = () => {
   return (
-    <div className=" flex items-center justify-center  bg-white dark:bg-dark">
+    <div className=" flex items-center justify-center  bg-light dark:bg-dark">
       <div className="p-8 mb-10 w-4/5 max-w-6xl">
         <div className="title md:text-7xl text-5xl font-mono font-bold text-gray-500 dark:text-white ">
           <Typewriter />
