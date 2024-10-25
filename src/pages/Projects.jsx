@@ -24,7 +24,9 @@ const Projects = () => {
         </div>
         <div>
           <div className="bg-gray-100 dark:bg-gray-800 p-8 rounded-lg shadow-lg">
-            <h2 className="text-2xl font-bold text-yellow font-mono ">E-commerce API</h2>
+            <h2 className="text-2xl font-bold text-yellow font-mono  ">
+              <a href="https://github.com/adjay27/e-commerce--api" target="_blank" rel="noreferrer noopener" className="hover:underline"> E-commerce API</a>
+            </h2>
             <p className="mt-2 text-xs text-gray-600 dark:text-gray-300">Simple API for managing products, orders, and users in a basic E-Commerce system.</p>
             <div className="flex gap-2 mt-2">
               <span className="inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-700 ring-1 ring-inset ring-red-600/10">
